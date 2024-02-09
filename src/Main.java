@@ -1,15 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.OffsetDateTime;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        String inputDataString = "2023-03-01T13:00:00Z";
+        OffsetDateTime dataObject = OffsetDateTime.parse(inputDataString);
+        System.out.println("Oggetto Data: " + dataObject);
+
+        String dataYear = String.valueOf(dataObject.getYear());
+        System.out.println("Year: " + dataYear);
+
+        String dataMonth = String.valueOf(dataObject.getMonth());
+        System.out.println("Month: " + dataMonth.toLowerCase());
+
+        String dataDayOfMonth = String.valueOf(dataObject.getDayOfMonth());
+        System.out.println("Day Of Month: " + dataDayOfMonth);
+
+        String dataDayOfWeek = String.valueOf(dataObject.getDayOfWeek());
+        System.out.println("Day Of Week: " + dataDayOfWeek.toLowerCase());
+
     }
 }
